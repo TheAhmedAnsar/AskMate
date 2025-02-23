@@ -1,0 +1,52 @@
+<RelativeLayout android:id="@+id/relative"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <ImageView
+        android:id="@+id/app_icon"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/appicon"
+
+        android:scaleType="centerCrop"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp" />
+
+    <TextView
+        android:id="@+id/notification_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="8dp"
+        android:layout_toEndOf="@+id/app_icon"
+        android:ellipsize="end"
+        android:fontFamily="@font/nunito_sans_semibold"
+        android:maxLines="1"
+        android:text="title"
+        android:layout_marginTop="5dp"
+        android:textColor="#000"
+        android:textSize="13sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/notification_subtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/notification_title"
+        android:layout_alignStart="@+id/notification_title"
+        android:layout_marginTop="2dp"
+android:layout_marginBottom="10dp"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:text="Subtitle Text"
+        android:textColor="#000"
+        android:textStyle="bold"
+        android:textSize="14.5sp" />
+
+</RelativeLayout>

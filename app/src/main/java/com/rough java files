@@ -1,0 +1,138 @@
+----------------------------------Search questions----------------------------------
+
+package com.askmate;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.SearchView;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
+import android.os.Bundle;
+import android.util.Log;
+import android.view.View;
+import android.widget.Toast;
+
+import com.askmate.Adapter.Adapter_of_search_user;
+import com.askmate.Modal.Question;
+import com.firebase.ui.database.FirebaseRecyclerOptions;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.Query;
+
+import java.util.Locale;
+
+public class SearchQuestions extends AppCompatActivity {
+
+    SearchView searchView;
+    Adapter_of_search_user adapters;
+    RecyclerView recyclerView;
+
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_search_questions);
+
+        searchView = findViewById(R.id.searchview);
+        recyclerView = findViewById(R.id.recycler_view);
+
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+
+        FirebaseRecyclerOptions<Question> options = new FirebaseRecyclerOptions
+                .Builder<Question>()
+                .setQuery(null, Question.class)
+                .build();
+
+//        .setQuery(FirebaseDatabase.getInstance().getReference().child("askmate").child("questions"), Question.class)
+//                .build();
+        adapters = new Adapter_of_search_user(options);
+
+        recyclerView.setAdapter(adapters);
+
+        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String query) {
+                adapters.stopListening();
+                processsearch(query);
+
+                return false;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String newText) {
+                adapters.stopListening();
+
+                if (newText.isEmpty()) {
+                    processsearch("");
+                    adapters.stopListening();
+
+
+                } else {
+//                    adapters.stopListening();
+                    processsearch(newText);
+                }
+                return false;
+            }
+        });
+
+    }
+//    @Override
+//    protected void onStart() {
+//        super.onStart();
+//        adapters.startListening();
+//    }
+//
+//    @Override
+//    protected void onStop() {
+//        super.onStop();
+//        adapters.stopListening();
+//    }
+
+    private void processsearch(String s) {
+
+        String query = s.toLowerCase(Locale.ROOT);
+
+        Query firebaseSearchQuery;
+//        Query firebaseSearchQuery;
+        if (query.isEmpty()) {
+            firebaseSearchQuery = FirebaseDatabase.getInstance().getReference()
+                    .child("askmate").child("questions")
+                    .orderByChild("question");
+        } else {
+            firebaseSearchQuery = FirebaseDatabase.getInstance().getReference()
+                    .child("askmate").child("questions")
+                    .orderByChild("question")
+                    .startAt(query)
+                    .endAt(query + "\uf8ff");
+        }
+
+        Log.d("search", "processSearch: Query - " + firebaseSearchQuery.toString());
+
+        FirebaseRecyclerOptions<Question> options = new FirebaseRecyclerOptions
+                .Builder<Question>()
+                .setQuery(firebaseSearchQuery, Question.class)
+                .build();
+
+        adapters.updateOptions(options);
+
+
+//        FirebaseRecyclerOptions<Question> options = new FirebaseRecyclerOptions
+//                .Builder<Question>()
+//                .setQuery(FirebaseDatabase.getInstance().getReference()
+////                        .child("askmate").child("questions").or, Question.class)
+////                        .child("askmate").child("questions").orderByChild("question").startAt(allwords).endAt("~"), Question.class)
+//                        .child("askmate").child("questions").orderByChild("question").startAt(allwords).endAt(allwords + "\uf8ff"), Question.class)
+//                .build();
+
+
+        adapters = new Adapter_of_search_user(options);
+        recyclerView.setAdapter(adapters);
+        adapters.notifyDataSetChanged();
+        adapters.startListening();
+
+
+
+    }
+
+}
+
+---------------------------------------The end--------------------------------------------

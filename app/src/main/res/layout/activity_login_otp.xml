@@ -1,0 +1,509 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraint"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+
+    <ProgressBar
+        android:id="@+id/progressbar1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+
+            android:id="@+id/linearLayoutCompat3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.454"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.023">
+
+            <ImageView
+                android:id="@+id/back"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="344dp"
+                android:layout_marginBottom="17dp"
+                android:src="@drawable/ic_baseline_arrow_back_24"
+                app:tint="@color/black" />
+
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/linearLayoutCompat4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="30dp"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.086"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayoutCompat3"
+            app:layout_constraintVertical_bias="0.0">
+
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/nunito_sans"
+                android:text="Enter OTP"
+                android:textColor="@color/black"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/linearLayoutCompat6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="56dp"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayoutCompat4"
+            tools:layout_editor_absoluteX="12dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/nunito_sans"
+                android:text="A 6 digit verification code has been sent to "
+                android:textColor="@color/black"
+                android:textSize="17sp" />
+
+            <TextView
+                android:id="@+id/phonenumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+
+                android:textColor="@color/black"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+
+            android:id="@+id/linearLayoutCompat5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayoutCompat6">
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/ThemeOverlay.AppTheme.TextInputEditText.Outlined"
+                android:layout_gravity="center"
+                android:gravity="center"
+                app:boxStrokeColor="#5EC0F6"
+                app:boxStrokeWidth="1dp"
+                app:hintAnimationEnabled="false"
+                app:hintEnabled="false"
+                app:hintTextColor="@color/black"
+                app:startIconTint="@color/black">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/otp_read"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@android:color/transparent"
+                    android:hint="Enter Otp"
+                    android:fontFamily="@font/nunito_sans"
+                    android:imeOptions="actionNext"
+                    android:inputType="number"
+                    android:maxLength="6"
+                    android:maxLines="1"
+                    android:textAlignment="center"
+
+                    android:textColor="@color/black"
+                    android:textSize="18sp" />
+
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/linearLayoutCompat10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="25dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.484"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayoutCompat6"
+            app:layout_constraintVertical_bias="0.357">
+
+            <TextView
+                android:id="@+id/resend_otp_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:enabled="false"
+                android:fontFamily="@font/nunito_sans"
+
+                android:text="RESEND OTP in  " />
+
+            <TextView
+                android:id="@+id/resendTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="00:59"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:fontFamily="@font/nunito_sans"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/resend_codee"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" seconds"
+                android:fontFamily="@font/nunito_sans"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="25dp"
+            android:gravity="center"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayoutCompat5">
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/Button"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:layout_margin="15dp"
+                android:background="@drawable/bottom_cut"
+                android:gravity="center"
+                android:fontFamily="@font/nunito_sans"
+                android:text="Submit otp"
+                android:textColor="@color/white"
+
+                />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+
+    <!--    <androidx.appcompat.widget.LinearLayoutCompat-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_gravity="center"-->
+    <!--        android:gravity="center"-->
+    <!--        android:layout_marginTop="20dp"-->
+    <!--        app:layout_constraintTop_toBottomOf="@+id/linearLayoutCompat5">-->
+
+
+    <!--        <androidx.appcompat.widget.AppCompatButton-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="50dp"-->
+    <!--            android:layout_gravity="center"-->
+    <!--            android:layout_margin="15dp"-->
+    <!--            android:background="@drawable/bottom_cut"-->
+    <!--            android:gravity="center"-->
+    <!--            android:text="SIGN In"-->
+    <!--            android:textColor="@color/white"-->
+
+    <!--            />-->
+
+    <!--    </androidx.appcompat.widget.LinearLayoutCompat>-->
+
+
+    <!--        <com.google.android.material.textfield.TextInputLayout-->
+
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_margin="5dp"-->
+    <!--            android:hint="Phone number"-->
+    <!--            app:boxStrokeColor="#5EC0F6"-->
+    <!--            app:boxStrokeWidth="1dp"-->
+    <!--            app:hintAnimationEnabled="true"-->
+    <!--            app:hintTextColor="#5EC0F6"-->
+    <!--            app:startIconTint="@color/black">-->
+
+    <!--            <com.google.android.material.textfield.TextInputEditText-->
+    <!--                android:id="@+id/PHONE_number"-->
+    <!--                android:layout_width="match_parent"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:layout_marginTop="10dp"-->
+    <!--                android:fontFamily="@font/robotoregular"-->
+    <!--                android:imeOptions="actionNext"-->
+    <!--                android:background="@android:color/transparent"-->
+    <!--                android:inputType="number"-->
+    <!--                android:textColor="@color/black"-->
+    <!--                android:textSize="17sp" />-->
+
+    <!--        </com.google.android.material.textfield.TextInputLayout>-->
+
+    <!--        <androidx.appcompat.widget.LinearLayoutCompat-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:orientation="horizontal"-->
+    <!--            android:layout_marginTop="10dp"-->
+
+    <!--            >-->
+
+
+    <!--        <com.google.android.material.textfield.TextInputLayout-->
+
+    <!--            android:layout_width="225dp"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_margin="5dp"-->
+    <!--            android:hint="Enter your OTP"-->
+    <!--            app:boxStrokeColor="#5EC0F6"-->
+    <!--            app:boxStrokeWidth="1dp"-->
+    <!--            app:endIconTint="@color/black"-->
+    <!--            app:hintTextColor="#5EC0F6"-->
+    <!--            app:startIconTint="@color/black">-->
+
+    <!--            <com.google.android.material.textfield.TextInputEditText-->
+    <!--                android:id="@+id/otp"-->
+    <!--                android:layout_width="match_parent"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:layout_marginTop="10dp"-->
+    <!--android:maxLength="6"-->
+    <!--android:background="@android:color/transparent"-->
+    <!--                android:fontFamily="@font/robotoregular"-->
+    <!--                android:imeOptions="actionNext"-->
+    <!--                android:inputType="number" />-->
+
+    <!--        </com.google.android.material.textfield.TextInputLayout>-->
+
+
+    <!--          <RelativeLayout-->
+    <!--              android:layout_width="wrap_content"-->
+    <!--              android:layout_height="50dp"-->
+    <!--              android:layout_gravity="center"-->
+    <!--              android:gravity="center"-->
+    <!--              android:layout_marginStart="15dp"-->
+    <!--android:layout_weight="1"-->
+    <!--              android:background="@drawable/reset_button_background"-->
+    <!--              >-->
+
+    <!--              <TextView-->
+    <!--                  android:layout_width="match_parent"-->
+    <!--                  android:layout_height="wrap_content"-->
+    <!--                  android:text="Resend"-->
+    <!--                  android:textStyle="bold"-->
+    <!--                  android:layout_gravity="center"-->
+    <!--                  android:gravity="center"-->
+    <!--                  android:textColor="#5EC0F6"-->
+
+    <!--                  android:textSize="20sp"-->
+    <!--                  />-->
+    <!--          </RelativeLayout>-->
+
+    <!--        </androidx.appcompat.widget.LinearLayoutCompat>-->
+
+    <!--<androidx.appcompat.widget.LinearLayoutCompat-->
+    <!--    android:layout_width="match_parent"-->
+    <!--    android:layout_height="wrap_content"-->
+    <!--    android:orientation="horizontal"-->
+    <!--    >-->
+    <!--    <TextView-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:text="The code has been sent again"-->
+    <!--        android:layout_marginStart="5dp"-->
+    <!--        android:visibility="gone"-->
+    <!--        android:layout_gravity="center"-->
+    <!--        android:textColor="@color/black"-->
+    <!--        android:textSize="15sp"-->
+    <!--        />-->
+    <!--&lt;!&ndash; <TextView&ndash;&gt;-->
+    <!--&lt;!&ndash;        android:layout_width="wrap_content"&ndash;&gt;-->
+    <!--&lt;!&ndash;        android:layout_height="wrap_content"&ndash;&gt;-->
+    <!--&lt;!&ndash;        android:text="59"&ndash;&gt;-->
+    <!--&lt;!&ndash;        android:layout_marginStart="5dp"&ndash;&gt;-->
+    <!--&lt;!&ndash;        android:layout_gravity="center"&ndash;&gt;-->
+    <!--&lt;!&ndash;        android:textColor="@color/black"&ndash;&gt;-->
+    <!--&lt;!&ndash;        android:textSize="15sp"&ndash;&gt;-->
+    <!--&lt;!&ndash;        />&ndash;&gt;-->
+    <!--&lt;!&ndash;    <TextView&ndash;&gt;-->
+    <!--&lt;!&ndash;        android:layout_width="wrap_content"&ndash;&gt;-->
+    <!--&lt;!&ndash;        android:layout_height="wrap_content"&ndash;&gt;-->
+    <!--&lt;!&ndash;        android:text="Seconds"&ndash;&gt;-->
+    <!--&lt;!&ndash;        android:layout_marginStart="5dp"&ndash;&gt;-->
+    <!--&lt;!&ndash;        android:layout_gravity="center"&ndash;&gt;-->
+    <!--&lt;!&ndash;        android:textColor="@color/black"&ndash;&gt;-->
+    <!--&lt;!&ndash;        android:textSize="15sp"&ndash;&gt;-->
+    <!--&lt;!&ndash;        />&ndash;&gt;-->
+
+    <!--</androidx.appcompat.widget.LinearLayoutCompat>-->
+
+
+
+
+
+    <!--        &lt;!&ndash;        <com.google.android.material.textfield.TextInputLayout&ndash;&gt;-->
+    <!--        &lt;!&ndash;            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"&ndash;&gt;-->
+    <!--        &lt;!&ndash;            android:layout_width="match_parent"&ndash;&gt;-->
+    <!--        &lt;!&ndash;            android:layout_height="wrap_content"&ndash;&gt;-->
+    <!--        &lt;!&ndash;            android:layout_margin="5dp"&ndash;&gt;-->
+    <!--        &lt;!&ndash;            android:hint="Password"&ndash;&gt;-->
+    <!--        &lt;!&ndash;            app:boxStrokeColor="#7c8ef2"&ndash;&gt;-->
+    <!--        &lt;!&ndash;            app:boxStrokeWidth="0.50dp"&ndash;&gt;-->
+    <!--        &lt;!&ndash;            app:endIconTint="@color/black"&ndash;&gt;-->
+    <!--        &lt;!&ndash;            app:hintTextColor="@color/black"&ndash;&gt;-->
+    <!--        &lt;!&ndash;            app:startIconTint="@color/black">&ndash;&gt;-->
+
+    <!--        &lt;!&ndash;            <com.google.android.material.textfield.TextInputEditText&ndash;&gt;-->
+    <!--        &lt;!&ndash;                android:id="@+id/PASSword"&ndash;&gt;-->
+    <!--        &lt;!&ndash;                android:layout_width="match_parent"&ndash;&gt;-->
+    <!--        &lt;!&ndash;                android:layout_height="wrap_content"&ndash;&gt;-->
+    <!--        &lt;!&ndash;                android:layout_marginTop="10dp"&ndash;&gt;-->
+
+    <!--        &lt;!&ndash;                android:fontFamily="@font/robotoregular"&ndash;&gt;-->
+    <!--        &lt;!&ndash;                android:imeOptions="actionNext"&ndash;&gt;-->
+    <!--        &lt;!&ndash;                android:inputType="textPassword" />&ndash;&gt;-->
+
+    <!--        &lt;!&ndash;        </com.google.android.material.textfield.TextInputLayout>&ndash;&gt;-->
+
+
+    <!--        <com.google.android.material.textfield.TextInputLayout-->
+    <!--            android:layout_marginTop="10dp"-->
+
+    <!--            android:layout_marginStart="5dp"-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="wrap_content"-->
+
+    <!--            android:layout_marginBottom="15dp"-->
+    <!--            android:hint="Password"-->
+    <!--            app:boxStrokeColor="#5EC0F6"-->
+    <!--            app:boxStrokeWidth="1dp"-->
+    <!--            app:hintTextColor="#5EC0F6"-->
+
+    <!--            app:startIconTint="@color/black">-->
+
+    <!--            <com.google.android.material.textfield.TextInputEditText-->
+    <!--                android:background="@android:color/transparent"-->
+    <!--                android:id="@+id/password"-->
+    <!--                android:layout_width="match_parent"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:layout_marginTop="10dp"-->
+    <!--                android:fontFamily="@font/robotoregular"-->
+    <!--                android:imeOptions="actionDone"-->
+    <!--                android:inputType="textPassword" />-->
+
+    <!--        </com.google.android.material.textfield.TextInputLayout>-->
+
+    <!--        <com.google.android.material.textfield.TextInputLayout-->
+    <!--            android:layout_marginTop="10dp"-->
+
+    <!--            android:layout_marginStart="5dp"-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_marginBottom="15dp"-->
+    <!--            android:hint="Confirm password"-->
+    <!--            app:boxStrokeColor="#5EC0F6"-->
+    <!--            app:boxStrokeWidth="1dp"-->
+    <!--            app:hintTextColor="#5EC0F6"-->
+    <!--            app:startIconTint="@color/black">-->
+
+    <!--            <com.google.android.material.textfield.TextInputEditText-->
+    <!--                android:background="@android:color/transparent"-->
+    <!--                android:id="@+id/CONF_password"-->
+    <!--                android:layout_width="match_parent"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:layout_marginTop="10dp"-->
+    <!--                android:layout_marginBottom="20dp"-->
+    <!--                android:fontFamily="@font/robotoregular"-->
+    <!--                android:imeOptions="actionDone"-->
+    <!--                android:inputType="textPassword" />-->
+
+    <!--        </com.google.android.material.textfield.TextInputLayout>-->
+
+
+
+    <!--    </androidx.appcompat.widget.LinearLayoutCompat>-->
+
+    <!--    <androidx.appcompat.widget.LinearLayoutCompat-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_gravity="center"-->
+    <!--        android:gravity="center"-->
+    <!--        app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toBottomOf="@+id/linearLayoutCompat5"-->
+    <!--        app:layout_constraintVertical_bias="0.094">-->
+
+
+    <!--        <androidx.appcompat.widget.AppCompatButton-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="50dp"-->
+    <!--            android:layout_gravity="center"-->
+    <!--            android:layout_margin="15dp"-->
+    <!--            android:background="@drawable/bottom_cut"-->
+    <!--            android:gravity="center"-->
+    <!--            android:text="SIGN Up"-->
+    <!--            android:textColor="@color/white"-->
+
+    <!--            />-->
+
+    <!--    </androidx.appcompat.widget.LinearLayoutCompat>-->
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

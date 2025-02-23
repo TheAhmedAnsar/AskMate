@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/dialog_bg">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="5dp"
+            >
+
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textinputcategory"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/ThemeOverlay.AppTheme.TextInputEditText.Outlined"
+                app:boxCornerRadiusBottomEnd="10dp"
+                app:boxCornerRadiusBottomStart="10dp"
+                app:boxCornerRadiusTopEnd="10dp"
+                app:boxCornerRadiusTopStart="10dp">
+                <!--                261B8BF2-->
+
+                <com.google.android.material.textfield.MaterialAutoCompleteTextView
+
+                    android:id="@+id/autoCompleteTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="52dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/qnapost_back"
+                    android:enabled="false"
+                    android:fontFamily="@font/nunito_sans_semibold"
+                    android:inputType="text"
+                    android:paddingStart="20dp"
+                    android:text="Choose category"
+                    android:textColor="@color/black"
+                    android:textSize="15sp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <FrameLayout
+                android:id="@+id/frameHide"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginTop="20dp"
+                android:visibility="gone"
+                android:background="@drawable/images_update_background"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:shapeAppearanceOverlay="@style/roundedImageView">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Tap here to upload image"
+                    android:paddingTop="50dp"
+                    android:layout_gravity="center"
+                    android:textSize="16sp"
+                    android:gravity="center"
+                    android:fontFamily="@font/nunito_sans"
+
+                    />
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/imageshow"
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp"
+                    android:scaleType="fitXY"
+
+                    app:shapeAppearanceOverlay="@style/roundedImageView" />
+
+
+
+                <!-- Overlay image -->
+                <ImageView
+                    android:id="@+id/closeButton"
+                    android:layout_width="25dp"
+
+                    android:layout_height="25dp"
+                    android:src="@drawable/ic_baseline_close_24"
+                    android:layout_gravity="top|end"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginTop="16dp" />
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/addImage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="15dp"
+                android:text="Tap to add Question image"
+                android:textSize="16sp"
+                android:fontFamily="@font/nunito_sans_semibold"
+                android:textColor="@color/appcolor"
+                android:layout_gravity="center"
+                android:gravity="center"
+                />
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:hint="Max"
+                android:minHeight="100dp"
+                android:textAlignment="textStart"
+                android:theme="@style/ThemeOverlay.AppTheme.TextInputEditText.Outlined"
+                app:boxCornerRadiusBottomEnd="10dp"
+                app:boxCornerRadiusBottomStart="10dp"
+                app:boxCornerRadiusTopEnd="10dp"
+                app:boxCornerRadiusTopStart="10dp"
+                app:hintEnabled="false"
+
+                >
+
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/question_asked"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:minHeight="100dp"
+                    android:background="@drawable/qna_edit_text_back"
+                    android:cursorVisible="true"
+                    android:fontFamily="@font/nunito_sans"
+                    android:gravity="start"
+                    android:hint="#Ask something to your mates"
+                    android:textColor="@color/black"
+
+                    android:textSize="17sp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginBottom="15dp"
+                android:gravity="center"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayoutCompat2">
+
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/Button"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:layout_margin="15dp"
+                    android:background="@drawable/bottom_cut"
+                    android:fontFamily="@font/nunito_sans_semibold"
+                    android:gravity="center"
+                    android:text="Ask"
+                    android:textColor="@color/white"
+
+                    />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </ScrollView>
+
+<!--    <androidx.appcompat.widget.LinearLayoutCompat-->
+<!--        android:id="@+id/post_linear_layout"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="5dp"-->
+<!--        android:layout_marginBottom="20dp"-->
+<!--        android:layout_marginStart="20dp"-->
+<!--        android:layout_marginEnd="20dp"-->
+<!--        android:padding="8dp"-->
+<!--        >-->
+
+<!--        <com.google.android.material.textfield.TextInputLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginTop="5dp"-->
+<!--            android:theme="@style/ThemeOverlay.AppTheme.TextInputEditText.Outlined"-->
+<!--            app:boxStrokeColor="#5EC0F6"-->
+<!--            app:boxStrokeWidth="1dp"-->
+<!--            app:hintAnimationEnabled="false"-->
+<!--            app:hintEnabled="false"-->
+<!--            app:hintTextColor="@color/black"-->
+<!--            app:startIconTint="@color/black">-->
+
+<!--            <com.google.android.material.textfield.TextInputEditText-->
+<!--                android:id="@+id/institute_name"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginTop="10dp"-->
+<!--                android:background="@android:color/transparent"-->
+<!--                android:fontFamily="@font/nunito_sans_semibold"-->
+<!--                android:imeOptions="actionNext"-->
+<!--                android:inputType="text"-->
+<!--                android:maxLength="40"-->
+<!--                android:hint="Type here..."-->
+
+<!--                android:maxLines="4"-->
+<!--                android:textColor="@color/black"-->
+<!--                android:textSize="18sp" />-->
+
+
+<!--        </com.google.android.material.textfield.TextInputLayout>-->
+
+
+
+
+<!--    </androidx.appcompat.widget.LinearLayoutCompat>-->
+
+
+
+
+
+
+
+</LinearLayout>

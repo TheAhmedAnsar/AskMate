@@ -1,0 +1,25 @@
+<!-- background_with_upper_radius_and_elevation.xml -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Shape for the top corners -->
+    <item android:top="0dp">
+        <shape android:shape="rectangle">
+            <corners android:topLeftRadius="30dp"
+                   android:topRightRadius="30dp"/>
+            <solid android:color="#eff0f7" /> <!-- Set your desired background color -->
+        </shape>
+    </item>
+
+    <!-- Elevation (shadow) -->
+    <item android:top="0dp"
+        android:left="0dp"
+        android:right="0dp">
+        <shape android:shape="rectangle">
+            <corners android:topLeftRadius="20dp"
+            android:topRightRadius="20dp" />
+            <solid android:color="#00FFFFFF" /> <!-- Fully transparent color -->
+            <padding android:top="4dp" /> <!-- Adjust the elevation by changing the top padding -->
+        </shape>
+    </item>
+
+</layer-list>

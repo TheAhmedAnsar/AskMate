@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/htab_maincontent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#eff0f7"
+    android:fitsSystemWindows="true">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/htab_appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/white"
+        android:background="#eff0f7"
+        android:layout_marginBottom="10dp"
+        android:fitsSystemWindows="true"
+        >
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/htab_collapse_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fitsSystemWindows="true"
+            app:scrimAnimationDuration="100"
+            android:background="#eff0f7"
+            app:contentScrim="#eff0f7"
+            app:layout_scrollFlags="scroll|enterAlways|enterAlwaysCollapsed|snap"
+
+            app:titleEnabled="false">
+
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/htab_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:layout_collapseMode="pin"
+                app:titleTextColor="@color/black"
+                android:layout_marginBottom="10dp"
+                >
+
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:id="@+id/location_set"
+                            android:layout_width="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="15dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/address1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+
+                                android:textSize="16.5sp"
+                                android:maxLength="15"
+                                android:textColor="@color/black"
+                                android:fontFamily="@font/nunito_sans_semibold"
+                                android:drawableEnd="@drawable/ic_baseline_arrow_drop_down_24"
+                                android:layout_marginStart="15dp" />
+
+                            <TextView
+                                android:id="@+id/address2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+
+                                android:maxLength="15"
+                                android:textSize="14sp"
+                                android:textColor="#75000000"
+                                android:fontFamily="@font/nunito_sans"
+                                android:layout_marginStart="15dp" />
+
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/setting_profile"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginEnd="25dp"
+                        android:layout_marginTop="7dp"
+                        android:layout_gravity="end|center" />
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+            </androidx.appcompat.widget.Toolbar>
+
+
+
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <!--    <androidx.core.widget.NestedScrollView-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="match_parent"-->
+    <!--        app:layout_behavior="@string/appbar_scrolling_view_behavior"-->
+    <!--        android:paddingBottom="56dp"-->
+
+    <!--        >-->
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        >
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/secondLayout"
+            android:visibility="gone"
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="vertical"
+            >
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="match_parent"
+                android:layout_height="400dp"
+                android:layout_gravity="center"
+                android:src="@drawable/avaiablesoon"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:layout_gravity="center"
+                android:padding="10dp"
+                android:gravity="center"
+                android:textSize="18sp"
+                android:fontFamily="@font/nunito_sans_semibold"
+                android:text="Coming soon to this location! Meanwhile, explore our other cool features!"
+                />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+        <com.facebook.shimmer.ShimmerFrameLayout
+            android:id="@+id/shimmer"
+            android:visibility="visible"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+
+            >
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+
+
+                <include layout="@layout/shimmer_home"/>
+                <include layout="@layout/shimmer_home"/>
+                <include layout="@layout/shimmer_home"/>
+                <include layout="@layout/shimmer_home"/>
+                <include layout="@layout/shimmer_home"/>
+
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+
+        </com.facebook.shimmer.ShimmerFrameLayout>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:paddingBottom="56dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:itemCount="5"
+        tools:listitem="@layout/coaching_struture" />
+
+
+
+
+    <!--    </androidx.core.widget.NestedScrollView>-->
+    <!--    <androidx.viewpager.widget.ViewPager-->
+    <!--        android:id="@+id/htab_viewpager"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:background="#eff0f7"-->
+    <!--        android:layout_height="match_parent"-->
+    <!--        app:layout_behavior="@string/appbar_scrolling_view_behavior"/>-->
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+    <!--                        <androidx.appcompat.widget.LinearLayoutCompat
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+
+                                >
+                                <androidx.appcompat.widget.AppCompatEditText
+                                    android:id="@+id/searchEditText"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:hint="Search"
+                                    android:paddingStart="16dp"
+                                    android:paddingEnd="16dp"
+                                    android:paddingTop="12dp"
+                                    android:paddingBottom="12dp"
+
+                                    android:background="@drawable/search_edittext_background"
+                                    android:drawableStart="@drawable/ic_baseline_search_24"
+                                    android:drawablePadding="8dp"
+                                    android:inputType="text"
+                                    android:imeOptions="actionSearch"
+                                    android:layout_marginEnd="10dp"
+                                    android:layout_marginStart="10dp"/>
+
+                            </androidx.appcompat.widget.LinearLayoutCompat>
+    -->
+
+    <!--<?xml version="1.0" encoding="utf-8"?>-->
+    <!--<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+    <!--    xmlns:tools="http://schemas.android.com/tools"-->
+    <!--    android:layout_width="match_parent"-->
+    <!--    android:layout_height="match_parent"-->
+    <!--    xmlns:app="http://schemas.android.com/apk/res-auto"-->
+    <!--    android:paddingBottom="56dp"-->
+    <!--    android:background="#eff0f7"-->
+    <!--    android:fitsSystemWindows="false"-->
+    <!--    android:paddingTop="?attr/actionBarSize"-->
+    <!--    tools:context=".Fragments.fragment_home">-->
+
+    <!--    &lt;!&ndash; TODO: Update blank fragment layout &ndash;&gt;-->
+
+    <!--    <androidx.core.widget.NestedScrollView-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="match_parent"-->
+    <!--        android:fitsSystemWindows="false"-->
+
+    <!--        >-->
+
+    <!--        <androidx.appcompat.widget.LinearLayoutCompat-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:orientation="vertical"-->
+
+
+    <!--            >-->
+
+
+    <!--            <androidx.appcompat.widget.LinearLayoutCompat-->
+    <!--                android:layout_width="match_parent"-->
+    <!--                android:layout_height="wrap_content">-->
+
+    <!--                <androidx.appcompat.widget.LinearLayoutCompat-->
+    <!--                    android:layout_width="0dp"-->
+    <!--                    android:layout_height="wrap_content"-->
+    <!--                    android:layout_weight="1">-->
+
+    <!--                    <androidx.appcompat.widget.LinearLayoutCompat-->
+    <!--                        android:id="@+id/location_set"-->
+    <!--                        android:layout_width="wrap_content"-->
+    <!--                        android:layout_marginStart="10dp"-->
+    <!--                        android:layout_height="wrap_content"-->
+    <!--                        android:layout_marginTop="15dp"-->
+    <!--                        android:orientation="vertical">-->
+
+    <!--                        <TextView-->
+    <!--                            android:id="@+id/address1"-->
+    <!--                            android:layout_width="wrap_content"-->
+    <!--                            android:layout_height="wrap_content"-->
+    <!--                            android:text="Santosh Nagar"-->
+    <!--                            android:textSize="16.5sp"-->
+    <!--                            android:maxLength="15"-->
+    <!--                            android:textColor="@color/black"-->
+    <!--                            android:fontFamily="@font/nunito_sans_semibold"-->
+    <!--                            android:drawableEnd="@drawable/ic_baseline_arrow_drop_down_24"-->
+    <!--                            android:layout_marginStart="15dp" />-->
+
+    <!--                        <TextView-->
+    <!--                            android:id="@+id/address2"-->
+    <!--                            android:layout_width="wrap_content"-->
+    <!--                            android:layout_height="wrap_content"-->
+    <!--                            android:text="Goregaon East"-->
+    <!--                            android:maxLength="15"-->
+    <!--                            android:textSize="14sp"-->
+    <!--                            android:textColor="#75000000"-->
+    <!--                            android:fontFamily="@font/nunito_sans"-->
+    <!--                            android:layout_marginStart="15dp" />-->
+
+    <!--                    </androidx.appcompat.widget.LinearLayoutCompat>-->
+    <!--                </androidx.appcompat.widget.LinearLayoutCompat>-->
+
+    <!--                <de.hdodenhof.circleimageview.CircleImageView-->
+    <!--                    android:id="@+id/setting_profile"-->
+    <!--                    android:layout_width="40dp"-->
+    <!--                    android:layout_height="40dp"-->
+    <!--                    android:layout_marginEnd="25dp"-->
+    <!--android:layout_marginTop="7dp"-->
+    <!--                    android:src="@drawable/human"-->
+    <!--                    android:layout_gravity="end|center" />-->
+    <!--            </androidx.appcompat.widget.LinearLayoutCompat>-->
+
+    <!--            &lt;!&ndash;            <androidx.appcompat.widget.LinearLayoutCompat&ndash;&gt;-->
+    <!--&lt;!&ndash;                android:layout_width="wrap_content"&ndash;&gt;-->
+    <!--&lt;!&ndash;                android:layout_height="wrap_content"&ndash;&gt;-->
+    <!--&lt;!&ndash;                >&ndash;&gt;-->
+
+    <!--&lt;!&ndash;            </androidx.appcompat.widget.LinearLayoutCompat>&ndash;&gt;-->
+
+    <!--            <androidx.recyclerview.widget.RecyclerView-->
+    <!--        android:id="@+id/recyclerView"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="match_parent"-->
+    <!--        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toTopOf="parent"-->
+    <!--        tools:itemCount="5"-->
+
+    <!--        tools:listitem="@layout/coaching_struture" />-->
+    <!--        </androidx.appcompat.widget.LinearLayoutCompat>-->
+
+    <!--    </androidx.core.widget.NestedScrollView>-->
+
+    <!--</androidx.constraintlayout.widget.ConstraintLayout>-->

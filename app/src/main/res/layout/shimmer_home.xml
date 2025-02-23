@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="15dp"
+    android:layout_marginEnd="15dp"
+    android:layout_marginTop="15dp"
+    android:layout_marginBottom="5dp"
+    app:cardElevation="3dp"
+    >
+
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:paddingBottom="5dp"
+        app:cardCornerRadius="6dp"
+        app:cardElevation="3dp"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/imageSlider"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                app:layout_constraintTop_toTopOf="parent"
+                android:background="#DDDDDD"
+              />
+
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/admissionOpen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/appcolor"
+                android:paddingStart="5dp"
+                android:paddingEnd="5dp"
+
+                app:layout_constraintBottom_toBottomOf="@+id/imageSlider"
+                app:layout_constraintStart_toStartOf="parent">
+
+<!--                <TextView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:fontFamily="@font/nunito_sans"-->
+<!--                    -->
+<!--                    android:textColor="#DDDDDD" />-->
+
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/classname_layout"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+         android:layout_marginTop="5dp"
+                android:layout_marginEnd="10dp"
+                android:background="#DDDDDD"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/imageSlider">
+
+                <TextView
+                    android:id="@+id/class_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/nunito_sans_semibold"
+
+                    android:textColor="@color/black"
+                    android:textSize="17sp" />
+
+
+                <!--                <androidx.appcompat.widget.AppCompatRatingBar-->
+                <!--                    style="?android:attr/ratingBarStyleIndicator"-->
+                <!--                    android:layout_width="wrap_content"-->
+                <!--                    android:layout_height="30dp"-->
+                <!--                    android:layout_gravity="center"-->
+                <!--                    android:layout_marginStart="10dp"-->
+                <!--                    android:isIndicator="false"-->
+                <!--                    android:numStars="5"-->
+
+                <!--                    />-->
+
+                <!--                <RatingBar-->
+                <!--                    android:layout_width="wrap_content"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:id="@+id/ratingBar"-->
+                <!--                    style="?android:attr/ratingBarStyleIndicator"-->
+                <!--                    android:scaleX=".6"-->
+                <!--                    android:scaleY=".6"-->
+                <!--                   -->
+                <!--                    android:transformPivotX="0dp"-->
+                <!--                    android:transformPivotY="0dp"-->
+                <!--                    android:max="5"/>-->
+                <!--                <RatingBar-->
+                <!--                    android:id="@+id/MyRating"-->
+                <!--                    style="?android:attr/ratingBarStyleSmall"-->
+                <!--                    android:layout_width="wrap_content"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:progressTint="@color/appcolor"-->
+                <!--                    android:isIndicator="true"-->
+                <!--                    android:scaleX="1.2"-->
+                <!--                    android:rating="3.5"-->
+                <!--                    android:layout_gravity="center"-->
+                <!--                    android:scaleY="1.2"-->
+                <!--                    android:numStars="5"-->
+                <!--                    android:layout_marginEnd="15dp"-->
+                <!--                    android:stepSize="0.1" />-->
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+             app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginEnd="10dp"
+                android:layout_marginTop="5dp"
+                android:orientation="vertical"
+                app:layout_constraintTop_toBottomOf="@id/classname_layout">
+                >
+
+                <TextView
+                    android:id="@+id/class_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/nunito_sans"
+                    android:background="#DDDDDD"
+
+                    android:textColor="@color/black"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/class_distance"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+android:layout_marginTop="5dp"
+                    android:background="#DDDDDD"
+
+                    android:layout_marginBottom="10dp"
+                    android:fontFamily="@font/nunito_sans_semibold"
+                    android:textColor="@color/appcolor"
+                    android:textSize="13sp" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+
+</com.google.android.material.card.MaterialCardView>

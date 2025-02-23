@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+
+
+    <item
+        android:id="@+id/Home"
+        android:icon="@drawable/ic_baseline_home_24"
+        android:title="Home"/>
+
+    <item
+        android:id="@+id/QnA"
+        android:icon="@drawable/ic_baseline_question_answer_24"
+        android:title="QnA"/>
+
+    <item
+        android:id="@+id/connect_menu"
+        android:icon="@drawable/baseline_people_24"
+        android:title="Connect"/>
+
+
+    <item
+        android:id="@+id/News"
+        android:icon="@drawable/world_wide_signal_svgrepo_com"
+        android:title="News"/>
+
+
+
+    <item
+        android:id="@+id/Settings"
+        android:title="Setting"
+        android:icon="@drawable/ic_baseline_settings_24"
+      />
+
+
+
+
+</menu>

@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="15dp"
+    android:layout_marginEnd="15dp"
+    android:layout_marginTop="15dp"
+    android:layout_marginBottom="5dp"
+    app:cardElevation="3dp"
+>
+
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:paddingBottom="5dp"
+        app:cardCornerRadius="6dp"
+        app:cardElevation="3dp"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.smarteist.autoimageslider.SliderView
+                android:id="@+id/imageSlider"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:sliderAnimationDuration="600"
+                app:sliderAutoCycleDirection="back_and_forth"
+                app:sliderAutoCycleEnabled="true"
+                app:sliderIndicatorAnimationDuration="600"
+                app:sliderIndicatorGravity="center_horizontal|bottom"
+                app:sliderIndicatorMargin="15dp"
+                app:sliderIndicatorOrientation="horizontal"
+                app:sliderIndicatorPadding="3dp"
+                app:sliderIndicatorRadius="2dp"
+                app:sliderIndicatorRtlMode="off"
+                app:sliderIndicatorSelectedColor="@android:color/transparent"
+                app:sliderIndicatorUnselectedColor="@android:color/transparent"
+
+                app:sliderScrollTimeInSec="1"
+                app:sliderStartAutoCycle="true" />
+
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/admissionOpen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/appcolor"
+                android:paddingStart="5dp"
+                android:paddingEnd="5dp"
+android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="@+id/imageSlider"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/nunito_sans"
+                    android:text="Admission open"
+                    android:textColor="@color/white" />
+
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/classname_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/imageSlider">
+
+                <TextView
+                    android:id="@+id/class_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/nunito_sans_semibold"
+                    android:text="MindPace Academy"
+                    android:textColor="@color/black"
+                    android:textSize="17sp" />
+
+
+<!--                <androidx.appcompat.widget.AppCompatRatingBar-->
+<!--                    style="?android:attr/ratingBarStyleIndicator"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="30dp"-->
+<!--                    android:layout_gravity="center"-->
+<!--                    android:layout_marginStart="10dp"-->
+<!--                    android:isIndicator="false"-->
+<!--                    android:numStars="5"-->
+
+<!--                    />-->
+
+<!--                <RatingBar-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:id="@+id/ratingBar"-->
+<!--                    style="?android:attr/ratingBarStyleIndicator"-->
+<!--                    android:scaleX=".6"-->
+<!--                    android:scaleY=".6"-->
+<!--                   -->
+<!--                    android:transformPivotX="0dp"-->
+<!--                    android:transformPivotY="0dp"-->
+<!--                    android:max="5"/>-->
+<!--                <RatingBar-->
+<!--                    android:id="@+id/MyRating"-->
+<!--                    style="?android:attr/ratingBarStyleSmall"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:progressTint="@color/appcolor"-->
+<!--                    android:isIndicator="true"-->
+<!--                    android:scaleX="1.2"-->
+<!--                    android:rating="3.5"-->
+<!--                    android:layout_gravity="center"-->
+<!--                    android:scaleY="1.2"-->
+<!--                    android:numStars="5"-->
+<!--                    android:layout_marginEnd="15dp"-->
+<!--                    android:stepSize="0.1" />-->
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:orientation="vertical"
+                app:layout_constraintTop_toBottomOf="@id/classname_layout">
+                >
+
+                <TextView
+                    android:id="@+id/class_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/nunito_sans"
+                    android:text="G-Ward, BMC Colony"
+                    android:textColor="@color/black"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/class_distance"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginBottom="8dp"
+                    android:fontFamily="@font/nunito_sans_semibold"
+                    android:text="Just 150 meters away"
+                    android:textColor="@color/appcolor"
+                    android:textSize="13sp" />
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/offerLayout"
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:orientation="vertical"
+                    >
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="5dp"
+                        android:src="@drawable/divider"
+                        android:layerType="software" />
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        >
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_marginTop="5dp"
+                            android:src="@drawable/discount"
+                            android:layerType="software" />
+
+                        <TextView
+                            android:id="@+id/textOffer"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginStart="5dp"
+                            android:fontFamily="@font/nunito_sans_semibold"
+                            android:text="50% off on first 200 students"
+                            android:textColor="@color/black"
+                            android:textSize="13sp" />
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+<!--            <LinearLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:orientation="vertical"-->
+<!--                android:showDividers="middle"-->
+<!--                android:divider="@android:color/darker_gray"/>-->
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+
+</com.google.android.material.card.MaterialCardView>

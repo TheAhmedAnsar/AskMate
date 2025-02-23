@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.appcompat.widget.LinearLayoutCompat
+    android:id="@+id/linearLayoutCompat16"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="15dp"
+    android:layout_marginEnd="15dp"
+    android:orientation="vertical"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:elevation="10dp"
+        app:cardCornerRadius="10dp"
+        app:cardUseCompatPadding="true">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp">
+
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/black"
+                    app:cardCornerRadius="80dp"
+                    android:layout_gravity="center"
+                    app:cardElevation="1dp">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/profile_image"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:background="#DDDDDD" />
+                </com.google.android.material.card.MaterialCardView>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_gravity="center"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="#DDDDDD"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/name"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/nunito_sans_semibold"
+                            android:textColor="@color/black"
+                            android:textSize="15sp" />
+
+                        <!--                        <TextView-->
+
+                        <!--                            android:layout_width="wrap_content"-->
+                        <!--                            android:layout_height="wrap_content"-->
+                        <!--                            android:fontFamily="@font/nunito_sans_semibold"-->
+                        <!--                            android:text="Physics"-->
+                        <!--                            android:textColor="@color/appcolor"-->
+                        <!--                            android:textSize="12sp" />-->
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="5dp"
+                        android:layout_height="5dp"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="11dp"
+                        android:layout_marginEnd="5dp"
+                        android:background="@drawable/circle" />
+
+                    <TextView
+                        android:id="@+id/date"
+                        android:layout_width="40dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="5dp"
+                        android:background="#DDDDDD"
+                        android:drawableStart="@drawable/circle"
+                        android:fontFamily="@font/numans"
+                        android:textColor="#DDDDDD"
+                        android:textSize="14sp" />
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/tapToEditLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="6dp"
+                android:layout_marginEnd="15dp"
+                android:gravity="bottom|center"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="@+id/profileInfoLayout"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
+
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/imageAnswer"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:adjustViewBounds="true"
+                    android:scaleType="fitXY"
+                    android:visibility="gone"
+                    app:shapeAppearanceOverlay="@style/roundedImageView" />
+
+                <TextView
+                    android:id="@+id/question"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#DDDDDD"
+                    android:fontFamily="@font/nunito_sans"
+
+
+                    android:textColor="@color/black"
+                    android:textSize="16.5sp" />
+
+                <TextView
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginBottom="2dp"
+                    android:background="#DDDDDD"
+                    android:fontFamily="@font/nunito_sans"
+
+
+                    android:textColor="@color/black"
+                    android:textSize="16.5sp" />
+
+                <TextView
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#DDDDDD"
+                    android:fontFamily="@font/nunito_sans"
+
+
+                    android:textColor="@color/black"
+                    android:textSize="16.5sp" />
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="15dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:src="@drawable/like_heart"
+
+                        android:tint="#DDDDDD"
+                        android:layout_marginEnd="10dp"
+                        />
+<!--                    <com.jackandphantom.androidlikebutton.AndroidLikeButton-->
+<!--                        android:layout_width="30dp"-->
+<!--                        android:layout_height="30dp"-->
+
+<!--                        android:layout_marginEnd="10dp"-->
+<!--                        app:circle_endColor="#f4ac1b"-->
+<!--                        app:circle_startColor="#fcd229"-->
+<!--                        app:dot_color_1="#f5ce31"-->
+<!--                        app:dot_color_2="#ed8128"-->
+
+<!--                        app:like_icon="@drawable/like_heart"-->
+<!--                        app:unlike_icon="@drawable/unlike_heart" />-->
+
+                    <TextView
+                        android:id="@+id/likescount"
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="20dp"
+                        android:background="#DDDDDD"
+                        android:fontFamily="@font/nunito_sans"
+                        android:gravity="center"
+
+                        android:textColor="@color/black" />
+
+
+                    <!--                    <androidx.appcompat.widget.AppCompatImageView-->
+                    <!--                        android:layout_width="wrap_content"-->
+                    <!--                        android:layout_height="wrap_content" -->
+                    <!--                        android:src="@drawable/ic_baseline_question_answer_24"-->
+                    <!--                                        />-->
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </com.google.android.material.card.MaterialCardView>
+</androidx.appcompat.widget.LinearLayoutCompat>

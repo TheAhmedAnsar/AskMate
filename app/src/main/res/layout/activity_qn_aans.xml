@@ -1,0 +1,545 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/htab_maincontent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#eff0f7"
+    android:fitsSystemWindows="true">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/htab_appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#eff0f7"
+        android:fitsSystemWindows="true"
+
+        >
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/htab_collapse_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fitsSystemWindows="true"
+            app:scrimAnimationDuration="100"
+app:contentScrim="#eff0f7"
+            app:layout_scrollFlags="scroll|enterAlways|enterAlwaysCollapsed|snap"
+
+            app:titleEnabled="false">
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:elevation="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                app:cardCornerRadius="10dp"
+                app:cardUseCompatPadding="true">
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp">
+
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@color/black"
+                            app:cardCornerRadius="80dp"
+                            android:layout_gravity="center"
+                            app:cardElevation="1dp">
+
+                            <de.hdodenhof.circleimageview.CircleImageView
+                                android:id="@+id/profile_image"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                               />
+                        </com.google.android.material.card.MaterialCardView>
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:orientation="horizontal">
+
+                            <androidx.appcompat.widget.LinearLayoutCompat
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/name"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/nunito_sans_semibold"
+
+                                    android:textColor="@color/black"
+                                    android:textSize="15sp" />
+
+                                <TextView
+                                    android:id="@+id/category"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/nunito_sans_semibold"
+
+                                    android:textColor="@color/appcolor"
+                                    android:textSize="12sp" />
+
+                            </androidx.appcompat.widget.LinearLayoutCompat>
+
+                            <androidx.appcompat.widget.LinearLayoutCompat
+                                android:layout_width="5dp"
+                                android:layout_height="5dp"
+                                android:layout_marginStart="5dp"
+                                android:layout_marginTop="11dp"
+                                android:layout_marginEnd="5dp"
+                                android:background="@drawable/circle" />
+
+                            <TextView
+                                android:id="@+id/date"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="5dp"
+                                android:drawableStart="@drawable/circle"
+                                android:fontFamily="@font/nunito_sans"
+
+                                android:textColor="#99000000"
+                                android:textSize="14sp" />
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:id="@+id/tapToEditLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="6dp"
+                        android:layout_marginEnd="10dp"
+                        android:gravity="bottom|center"
+                        android:orientation="vertical"
+                        app:layout_constraintBottom_toBottomOf="@+id/profileInfoLayout"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent">
+
+                        <com.google.android.material.imageview.ShapeableImageView
+                            android:id="@+id/imageQuestion"
+                            android:layout_width="match_parent"
+                            android:layout_height="300dp"
+                            android:scaleType="fitXY"
+                            android:visibility="gone"
+                            android:adjustViewBounds="true"
+
+                            app:shapeAppearanceOverlay="@style/roundedImageView"
+                            android:layout_marginBottom="10dp"
+                            />
+
+
+                        <TextView
+                            android:id="@+id/question"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="15dp"
+                            android:fontFamily="@font/nunito_sans"
+                            android:textColor="@color/black"
+                            android:textSize="15sp" />
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+                </androidx.appcompat.widget.LinearLayoutCompat>
+            </com.google.android.material.card.MaterialCardView>
+
+
+
+
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/htab_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:layout_collapseMode="pin"
+
+            app:titleTextColor="@color/black"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Answer"
+                android:layout_marginStart="20dp"
+                android:textSize="20sp"
+                android:fontFamily="@font/nunito_sans_semibold"
+                android:textColor="@color/black"
+                />
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/linearLayoutCompat_qna_ans"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_gravity="end"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/ask_background"
+                android:fontFamily="@font/nunito_sans_semibold"
+                android:textColor="@color/black"
+                android:textSize="20sp">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Add answer"
+                    android:layout_gravity="center"
+                    android:textSize="15sp"
+                    android:fontFamily="@font/nunito_sans_semibold"
+                    android:textColor="@color/black"
+                    />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="10dp"
+        android:fillViewport="true"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+
+        >
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+
+
+    >
+
+
+            <!--        <androidx.appcompat.widget.LinearLayoutCompat-->
+            <!--            android:layout_width="match_parent"-->
+            <!--            android:layout_height="wrap_content"-->
+            <!--            android:visibility="visible"-->
+
+
+            <!--    >-->
+
+            <com.facebook.shimmer.ShimmerFrameLayout
+                android:id="@+id/shimmer"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone"
+
+                >
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+
+                    <include layout="@layout/shimmer_answer" />
+
+                    <include layout="@layout/shimmer_answer" />
+
+                    <include layout="@layout/shimmer_answer" />
+
+                    <include layout="@layout/shimmer_answer" />
+
+                    <include layout="@layout/shimmer_answer" />
+
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+            </com.facebook.shimmer.ShimmerFrameLayout>
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="visible"
+                android:nestedScrollingEnabled="true"
+                tools:itemCount="20"
+                tools:listitem="@layout/dummy_answer"
+
+
+                />
+
+            <TextView
+                android:id="@+id/anotherLayout"
+                android:layout_width="match_parent"
+                android:layout_height="500dp"
+                android:layout_gravity="center"
+                android:fontFamily="@font/nunito_sans_semibold"
+                android:gravity="center"
+                android:text="Be the first to answer"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:visibility="gone" />
+
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+        <!--                </androidx.appcompat.widget.LinearLayoutCompat>-->
+
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+    <!--<?xml version="1.0" encoding="utf-8"?>-->
+
+    <!--<androidx.appcompat.widget.LinearLayoutCompat android:id="@+id/linearLayoutCompat16"-->
+    <!--    android:layout_width="match_parent"-->
+    <!--    android:layout_height="wrap_content"-->
+    <!--    android:layout_marginStart="15dp"-->
+    <!--    android:layout_marginEnd="15dp"-->
+    <!--    android:orientation="vertical"-->
+    <!--    app:layout_constraintEnd_toEndOf="parent"-->
+    <!--    app:layout_constraintStart_toStartOf="parent"-->
+    <!--    app:layout_constraintTop_toTopOf="parent"-->
+    <!--    xmlns:android="http://schemas.android.com/apk/res/android"-->
+    <!--    xmlns:app="http://schemas.android.com/apk/res-auto"-->
+    <!--    xmlns:tools="http://schemas.android.com/tools">-->
+
+    <!--    <androidx.core.widget.NestedScrollView-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        >-->
+    <!--        <androidx.appcompat.widget.LinearLayoutCompat-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:orientation="vertical"-->
+    <!--            >-->
+    <!--            <com.google.android.material.card.MaterialCardView-->
+    <!--                android:layout_width="match_parent"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:elevation="10dp"-->
+    <!--                android:layout_marginTop="10dp"-->
+    <!--                app:cardCornerRadius="10dp"-->
+    <!--                app:cardUseCompatPadding="true">-->
+
+    <!--                <androidx.appcompat.widget.LinearLayoutCompat-->
+    <!--                    android:layout_width="match_parent"-->
+    <!--                    android:layout_height="wrap_content"-->
+    <!--                    android:orientation="vertical">-->
+
+    <!--                    <androidx.appcompat.widget.LinearLayoutCompat-->
+    <!--                        android:layout_width="match_parent"-->
+    <!--                        android:layout_height="wrap_content"-->
+    <!--                        android:padding="10dp">-->
+
+
+    <!--                        <com.google.android.material.card.MaterialCardView-->
+    <!--                            android:layout_width="wrap_content"-->
+    <!--                            android:layout_height="wrap_content"-->
+    <!--                            android:backgroundTint="@color/black"-->
+    <!--                            app:cardCornerRadius="80dp"-->
+    <!--                            app:cardElevation="1dp">-->
+
+    <!--                            <de.hdodenhof.circleimageview.CircleImageView-->
+    <!--                                android:id="@+id/profile_image"-->
+    <!--                                android:layout_width="30dp"-->
+    <!--                                android:layout_height="30dp"-->
+    <!--                                android:src="@drawable/human" />-->
+    <!--                        </com.google.android.material.card.MaterialCardView>-->
+
+    <!--                        <androidx.appcompat.widget.LinearLayoutCompat-->
+    <!--                            android:layout_width="match_parent"-->
+    <!--                            android:layout_height="wrap_content"-->
+    <!--                            android:layout_marginStart="10dp"-->
+    <!--                            android:orientation="horizontal">-->
+
+    <!--                            <androidx.appcompat.widget.LinearLayoutCompat-->
+    <!--                                android:layout_width="wrap_content"-->
+    <!--                                android:layout_height="wrap_content"-->
+    <!--                                android:orientation="vertical">-->
+
+    <!--                                <TextView-->
+    <!--                                    android:id="@+id/name"-->
+    <!--                                    android:layout_width="wrap_content"-->
+    <!--                                    android:layout_height="wrap_content"-->
+    <!--                                    android:fontFamily="@font/nunito_sans_semibold"-->
+    <!--                                    android:text="Ahmed raza"-->
+    <!--                                    android:textColor="@color/black"-->
+    <!--                                    android:textSize="15sp" />-->
+
+    <!--                                <TextView-->
+
+    <!--                                    android:layout_width="wrap_content"-->
+    <!--                                    android:layout_height="wrap_content"-->
+    <!--                                    android:fontFamily="@font/nunito_sans_semibold"-->
+    <!--                                    android:text="Physics"-->
+    <!--                                    android:textColor="@color/appcolor"-->
+    <!--                                    android:textSize="12sp" />-->
+
+    <!--                            </androidx.appcompat.widget.LinearLayoutCompat>-->
+
+    <!--                            <androidx.appcompat.widget.LinearLayoutCompat-->
+    <!--                                android:layout_width="5dp"-->
+    <!--                                android:layout_height="5dp"-->
+    <!--                                android:layout_marginStart="5dp"-->
+    <!--                                android:layout_marginTop="11dp"-->
+    <!--                                android:layout_marginEnd="5dp"-->
+    <!--                                android:background="@drawable/circle" />-->
+
+    <!--                            <TextView-->
+    <!--                                android:id="@+id/date"-->
+    <!--                                android:layout_width="wrap_content"-->
+    <!--                                android:layout_height="match_parent"-->
+    <!--                                android:layout_marginTop="5dp"-->
+    <!--                                android:drawableStart="@drawable/circle"-->
+    <!--                                android:fontFamily="@font/numans"-->
+    <!--                                android:text="18 sep"-->
+    <!--                                android:textColor="#99000000"-->
+    <!--                                android:textSize="14sp" />-->
+    <!--                        </androidx.appcompat.widget.LinearLayoutCompat>-->
+
+
+    <!--                    </androidx.appcompat.widget.LinearLayoutCompat>-->
+
+
+    <!--                    <androidx.appcompat.widget.LinearLayoutCompat-->
+    <!--                        android:id="@+id/tapToEditLayout"-->
+    <!--                        android:layout_width="match_parent"-->
+    <!--                        android:layout_height="wrap_content"-->
+    <!--                        android:layout_marginStart="15dp"-->
+    <!--                        android:layout_marginTop="6dp"-->
+    <!--                        android:layout_marginEnd="15dp"-->
+    <!--                        android:gravity="bottom|center"-->
+    <!--                        android:orientation="vertical"-->
+    <!--                        app:layout_constraintBottom_toBottomOf="@+id/profileInfoLayout"-->
+    <!--                        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--                        app:layout_constraintStart_toStartOf="parent">-->
+
+    <!--                        <TextView-->
+    <!--                            android:id="@+id/question"-->
+    <!--                            android:layout_width="match_parent"-->
+    <!--                            android:layout_height="wrap_content"-->
+    <!--                            android:fontFamily="@font/nunito_sans"-->
+    <!--                            android:text="What is the relationship between an object's mass,-->
+    <!--acceleration, and the force acting on it, according-->
+    <!--to Newton's second law of motion?"-->
+    <!--                            android:layout_marginBottom="15dp"-->
+    <!--                            android:textColor="@color/black"-->
+    <!--                            android:textSize="15sp" />-->
+
+    <!--                        &lt;!&ndash;                    <androidx.appcompat.widget.LinearLayoutCompat&ndash;&gt;-->
+    <!--                        &lt;!&ndash;                        android:layout_width="match_parent"&ndash;&gt;-->
+    <!--                        &lt;!&ndash;                        android:layout_height="wrap_content"&ndash;&gt;-->
+    <!--                        &lt;!&ndash;                        android:layout_marginTop="20dp"&ndash;&gt;-->
+    <!--                        &lt;!&ndash;                        android:orientation="horizontal">&ndash;&gt;-->
+
+    <!--                        &lt;!&ndash;                        <com.jackandphantom.androidlikebutton.AndroidLikeButton&ndash;&gt;-->
+    <!--                        &lt;!&ndash;                            android:layout_width="30dp"&ndash;&gt;-->
+    <!--                        &lt;!&ndash;                            android:layout_height="30dp"&ndash;&gt;-->
+
+    <!--                        &lt;!&ndash;                            android:layout_marginEnd="10dp"&ndash;&gt;-->
+    <!--                        &lt;!&ndash;                            app:circle_endColor="#f4ac1b"&ndash;&gt;-->
+    <!--                        &lt;!&ndash;                            app:circle_startColor="#fcd229"&ndash;&gt;-->
+    <!--                        &lt;!&ndash;                            app:dot_color_1="#f5ce31"&ndash;&gt;-->
+    <!--                        &lt;!&ndash;                            app:dot_color_2="#ed8128"&ndash;&gt;-->
+    <!--                        &lt;!&ndash;                            app:like_icon="@drawable/like_heart"&ndash;&gt;-->
+    <!--                        &lt;!&ndash;                            app:unlike_icon="@drawable/unlike_heart" />&ndash;&gt;-->
+
+    <!--                        &lt;!&ndash;&lt;!&ndash;                        <TextView&ndash;&gt;&ndash;&gt;-->
+    <!--                        &lt;!&ndash;&lt;!&ndash;                            android:id="@+id/likescount"&ndash;&gt;&ndash;&gt;-->
+    <!--                        &lt;!&ndash;&lt;!&ndash;                            android:layout_width="wrap_content"&ndash;&gt;&ndash;&gt;-->
+    <!--                        &lt;!&ndash;&lt;!&ndash;                            android:layout_height="wrap_content"&ndash;&gt;&ndash;&gt;-->
+    <!--                        &lt;!&ndash;&lt;!&ndash;                            android:layout_gravity="center"&ndash;&gt;&ndash;&gt;-->
+    <!--                        &lt;!&ndash;&lt;!&ndash;                            android:layout_marginEnd="20dp"&ndash;&gt;&ndash;&gt;-->
+    <!--                        &lt;!&ndash;&lt;!&ndash;                            android:fontFamily="@font/nunito_sans"&ndash;&gt;&ndash;&gt;-->
+    <!--                        &lt;!&ndash;&lt;!&ndash;                            android:gravity="center"&ndash;&gt;&ndash;&gt;-->
+    <!--                        &lt;!&ndash;&lt;!&ndash;                            android:text="121k"&ndash;&gt;&ndash;&gt;-->
+    <!--                        &lt;!&ndash;&lt;!&ndash;                            android:textColor="@color/black" />&ndash;&gt;&ndash;&gt;-->
+
+
+    <!--                        &lt;!&ndash;                        &lt;!&ndash;<androidx.appcompat.widget.AppCompatImageView&ndash;&gt;&ndash;&gt;-->
+    <!--                        &lt;!&ndash;                        &lt;!&ndash;    android:layout_width="wrap_content"&ndash;&gt;&ndash;&gt;-->
+    <!--                        &lt;!&ndash;                        &lt;!&ndash;    android:layout_height="wrap_content" &ndash;&gt;&ndash;&gt;-->
+    <!--                        &lt;!&ndash;                        &lt;!&ndash;    android:src="@drawable/ic_baseline_question_answer_24"&ndash;&gt;&ndash;&gt;-->
+    <!--                        &lt;!&ndash;                        &lt;!&ndash;                    />&ndash;&gt;&ndash;&gt;-->
+    <!--                        &lt;!&ndash;&lt;!&ndash;                        <TextView&ndash;&gt;&ndash;&gt;-->
+    <!--                        &lt;!&ndash;&lt;!&ndash;                            android:id="@+id/commentscount"&ndash;&gt;&ndash;&gt;-->
+    <!--                        &lt;!&ndash;&lt;!&ndash;                            android:layout_width="wrap_content"&ndash;&gt;&ndash;&gt;-->
+    <!--                        &lt;!&ndash;&lt;!&ndash;                            android:layout_height="wrap_content"&ndash;&gt;&ndash;&gt;-->
+    <!--                        &lt;!&ndash;&lt;!&ndash;                            android:layout_gravity="center"&ndash;&gt;&ndash;&gt;-->
+    <!--                        &lt;!&ndash;&lt;!&ndash;                            android:layout_marginStart="10dp"&ndash;&gt;&ndash;&gt;-->
+    <!--                        &lt;!&ndash;&lt;!&ndash;                            android:drawableStart="@drawable/ic_baseline_question_answer_24"&ndash;&gt;&ndash;&gt;-->
+    <!--                        &lt;!&ndash;&lt;!&ndash;                            android:drawablePadding="10dp"&ndash;&gt;&ndash;&gt;-->
+    <!--                        &lt;!&ndash;&lt;!&ndash;                            android:fontFamily="@font/nunito_sans"&ndash;&gt;&ndash;&gt;-->
+    <!--                        &lt;!&ndash;&lt;!&ndash;                            android:paddingStart="10dp"&ndash;&gt;&ndash;&gt;-->
+    <!--                        &lt;!&ndash;&lt;!&ndash;                            android:text="121k"&ndash;&gt;&ndash;&gt;-->
+    <!--                        &lt;!&ndash;&lt;!&ndash;                            android:textColor="@color/black" />&ndash;&gt;&ndash;&gt;-->
+
+    <!--                        &lt;!&ndash;                    </androidx.appcompat.widget.LinearLayoutCompat>&ndash;&gt;-->
+
+
+    <!--                    </androidx.appcompat.widget.LinearLayoutCompat>-->
+    <!--                </androidx.appcompat.widget.LinearLayoutCompat>-->
+    <!--            </com.google.android.material.card.MaterialCardView>-->
+
+    <!--            <androidx.appcompat.widget.LinearLayoutCompat-->
+    <!--                android:layout_width="match_parent"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:layout_marginTop="10dp">-->
+
+
+    <!--                &lt;!&ndash;            <androidx.appcompat.widget.Toolbar&ndash;&gt;-->
+    <!--                &lt;!&ndash;                android:id="@+id/htab_toolbar"&ndash;&gt;-->
+    <!--                &lt;!&ndash;                android:layout_width="match_parent"&ndash;&gt;-->
+    <!--                &lt;!&ndash;                android:layout_height="?attr/actionBarSize"&ndash;&gt;-->
+    <!--                &lt;!&ndash;                app:layout_collapseMode="pin"&ndash;&gt;-->
+    <!--                &lt;!&ndash;                app:titleTextColor="@color/black"&ndash;&gt;-->
+    <!--                &lt;!&ndash;                app:menu="@menu/ask_menu"&ndash;&gt;-->
+    <!--                &lt;!&ndash;                >&ndash;&gt;-->
+
+    <!--                <TextView-->
+    <!--                    android:layout_width="match_parent"-->
+    <!--                    android:layout_height="40dp"-->
+    <!--                    android:text="Answers"-->
+    <!--                    android:textSize="20sp"-->
+    <!--                    android:fontFamily="@font/nunito_sans_semibold"-->
+    <!--                    android:textColor="@color/black"-->
+    <!--                    />-->
+    <!--                &lt;!&ndash;            </androidx.appcompat.widget.Toolbar>&ndash;&gt;-->
+
+    <!--            </androidx.appcompat.widget.LinearLayoutCompat>-->
+
+    <!--            <androidx.recyclerview.widget.RecyclerView-->
+    <!--                android:id="@+id/recyclerView"-->
+    <!--                android:layout_width="match_parent"-->
+    <!--                android:layout_height="match_parent"-->
+    <!--                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"-->
+    <!--                app:layout_constraintEnd_toEndOf="parent"-->
+    <!--                app:layout_constraintStart_toStartOf="parent"-->
+    <!--                app:layout_constraintTop_toTopOf="parent"-->
+    <!--                android:layout_marginStart="10dp"-->
+    <!--                tools:itemCount="5"-->
+    <!--                tools:listitem="@layout/dummy_answer" />-->
+
+    <!--        </androidx.appcompat.widget.LinearLayoutCompat>-->
+
+    <!--    </androidx.core.widget.NestedScrollView>-->
+
+
+
+
+    <!--</androidx.appcompat.widget.LinearLayoutCompat>-->

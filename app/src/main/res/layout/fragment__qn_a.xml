@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/htab_maincontent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#eff0f7"
+    android:fitsSystemWindows="true">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/htab_appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/white"
+        android:background="#eff0f7"
+        android:fitsSystemWindows="true"
+        >
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/htab_collapse_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fitsSystemWindows="true"
+            app:scrimAnimationDuration="100"
+            android:background="#eff0f7"
+            app:contentScrim="#eff0f7"
+            app:layout_scrollFlags="scroll|enterAlways|enterAlwaysCollapsed|snap"
+
+            app:titleEnabled="false">
+
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/htab_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:layout_collapseMode="pin"
+                app:titleTextColor="@color/black"
+
+            >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Discover"
+                    android:textSize="20sp"
+                    android:fontFamily="@font/nunito_sans_semibold"
+                    android:textColor="@color/black"
+                    />
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/linearlayout_ask"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_gravity="end"
+                    android:paddingStart="15dp"
+                    android:paddingEnd="15dp"
+                    android:layout_marginEnd="20dp"
+                    android:background="@drawable/ask_background"
+                    android:fontFamily="@font/nunito_sans_semibold"
+                    android:textColor="@color/black"
+                    android:textSize="20sp">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Ask"
+                        android:layout_gravity="center"
+                        android:textSize="15sp"
+                        android:fontFamily="@font/nunito_sans_semibold"
+                        android:textColor="@color/black"
+                        />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+            </androidx.appcompat.widget.Toolbar>
+
+
+
+
+</com.google.android.material.appbar.CollapsingToolbarLayout>
+
+</com.google.android.material.appbar.AppBarLayout>
+
+
+<androidx.core.widget.NestedScrollView
+    android:id="@+id/Nsv"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    android:paddingBottom="56dp"
+
+>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical"
+
+        >
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/searchEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Search here..."
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:paddingTop="12dp"
+            android:paddingBottom="12dp"
+android:fontFamily="@font/nunito_sans"
+            android:clickable="false"
+            android:focusable="false"
+            android:background="@drawable/search_edittext_background"
+            android:drawableStart="@drawable/ic_baseline_search_24"
+            android:drawablePadding="8dp"
+            android:inputType="text"
+            android:imeOptions="actionSearch"
+            android:layout_marginEnd="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginBottom="20dp"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:spanCount="2"
+            android:overScrollMode="never"
+
+            tools:listitem="@layout/dummy_qna"
+            />
+
+        <ProgressBar
+            android:id="@+id/idPBLoading"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+
+            />
+<!--        <Button-->
+<!--            android:id="@+id/loadMoreButton"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Load More"/>-->
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+</androidx.core.widget.NestedScrollView>
+<!--    <androidx.viewpager.widget.ViewPager-->
+<!--        android:id="@+id/htab_viewpager"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:background="#eff0f7"-->
+<!--        android:layout_height="match_parent"-->
+<!--        app:layout_behavior="@string/appbar_scrolling_view_behavior"/>-->
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

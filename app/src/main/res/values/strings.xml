@@ -1,0 +1,49 @@
+<resources>
+    <string name="app_name">AskMate</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="admob_app_id">ca-app-pub-1647095499376164~7484802728</string>
+    <string name="banner_ad_unit_id">ca-app-pub-1647095499376164/1668195803</string>
+<!--    <string-array name="subjects">-->
+<!--        <item>Mathematics</item>-->
+<!--        <item>Science</item>-->
+<!--        <item>History</item>-->
+<!--        <item>Geography</item>-->
+<!--        <item>English</item>-->
+<!--        <item>French</item>-->
+<!--        <item>Art</item>-->
+<!--        <item>Music</item>-->
+<!--        <item>Physical Education</item>-->
+<!--        <item>Programming</item>-->
+<!--        <item>Other</item>-->
+<!--    </string-array>-->
+
+    <string-array name="subjects">
+        <item>Mathematics</item>
+        <item>Science</item>
+        <item>History</item>
+        <item>Geography</item>
+        <item>English</item>
+        <item>Foreign Languages</item>
+        <item>Arts</item>
+        <item>Music</item>
+        <item>Physical Education</item>
+        <item>Technology</item>
+        <item>Economics</item>
+        <item>Business</item>
+        <item>Social Studies</item>
+        <item>Health</item>
+        <item>Psychology</item>
+        <item>Philosophy</item>
+        <item>Current Affairs</item>
+        <item>Test Preparation</item>
+        <item>Career Guidance</item>
+        <item>Miscellaneous</item>
+    </string-array>
+
+    <item name="source" type="id" />
+
+    <string name="bullet_text"><![CDATA[&#8226; Item 1<br/>&#8226; Item 2<br/>&#8226; Item 3]]></string>
+    <string name="default_notification_channel_id">news_channel</string>
+
+</resources>

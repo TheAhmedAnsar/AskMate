@@ -1,0 +1,105 @@
+plugins {
+    id 'com.android.application'
+    id 'com.google.gms.google-services'
+
+}
+
+android {
+    namespace 'com.askmate'
+    compileSdk 34
+
+    defaultConfig {
+        applicationId "com.askmate"
+        minSdk 23
+        targetSdk 34
+        versionCode 8
+        versionName "2.1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    buildFeatures {
+        viewBinding true
+        dataBinding true
+    }
+
+}
+
+dependencies {
+
+    // other libraries
+    implementation 'com.github.marcorei:Infinite-Fire:2.0.0'// below line is used for volley library
+    implementation 'com.android.volley:volley:1.1.1'
+// below line is used for image loading library
+    implementation 'com.squareup.picasso:picasso:2.71828'
+
+    implementation project(':nativetemplates')
+//    implementation 'com.github.daoibrahim:AdmobAdvancedNativeRecyclerview:1.0.0'
+
+    //Firebase-UI Library
+    implementation 'com.firebaseui:firebase-ui-database:4.3.1'
+
+    //Android Paging Libray
+    implementation "android.arch.paging:runtime:1.0.1"
+
+    //Firebase Pagination Library
+    implementation 'com.shreyaspatil:FirebaseRecyclerPagination:1.0.1'
+   implementation 'com.github.saitawngpha:NativeAds-RecyclerView:1.0.1'
+
+    implementation 'com.github.chrisbanes:PhotoView:2.3.0'
+    implementation 'com.google.firebase:firebase-messaging:23.0.8'
+    implementation  'com.airbnb.android:lottie:5.2.0'
+
+    implementation 'com.firebase:geofire-android-common:3.2.0'
+    implementation 'com.github.RaviKoradiya:ZoomableImageView:1.1.1'
+    implementation 'com.facebook.shimmer:shimmer:0.5.0'
+    // Full GeoFire library for Realtime Database users
+    implementation 'com.firebase:geofire-android:3.2.0'
+    implementation 'ch.hsr:geohash:1.4.0'
+
+    implementation 'com.firebaseui:firebase-ui-database:6.2.1'
+
+    implementation 'com.google.firebase:firebase-database:21.0.0'
+    implementation 'com.google.firebase:firebase-auth:23.0.0'
+    implementation 'com.google.firebase:firebase-storage:21.0.0'
+
+//    implementation 'com.github.smarteist:autoimageslider:1.4.0'
+//    implementation 'com.github.tntkhang:full-screen-image-view-library:1.1.0'
+    implementation 'com.github.smarteist:autoimageslider:1.4.0'
+
+    implementation 'com.github.bumptech.glide:glide:4.16.0'
+    implementation 'com.google.firebase:firebase-messaging:24.0.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.12.0'
+
+    implementation 'com.jackandphantom.android:androidlikebutton:1.2.0'
+
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
+    implementation 'com.google.android.gms:play-services-ads:23.1.0'
+
+    implementation 'com.google.android.gms:play-services-location:21.0.1'
+    implementation "com.google.android.libraries.places:places:3.3.0"
+    implementation 'com.google.android.gms:play-services-maps:18.2.0'
+    implementation 'com.google.android.gms:play-services-places:17.0.0'
+
+    implementation 'com.github.Drjacky:ImagePicker:2.3.22'
+
+
+    implementation 'androidx.navigation:navigation-fragment:2.7.7'
+    implementation 'androidx.navigation:navigation-ui:2.7.7'
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'com.google.android.material:material:1.11.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+}

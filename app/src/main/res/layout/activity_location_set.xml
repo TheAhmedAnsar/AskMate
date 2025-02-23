@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:map="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:name="com.google.android.gms.maps.SupportMapFragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/linearLayoutCompat"
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+
+        android:orientation="vertical"
+        map:layout_constraintEnd_toEndOf="parent"
+        map:layout_constraintStart_toStartOf="parent"
+        map:layout_constraintTop_toTopOf="parent">
+
+
+        <fragment
+            android:id="@+id/map"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            />
+<!--                     tools:context=".choose_location"-->
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp"
+        android:orientation="vertical"
+        map:layout_constraintEnd_toEndOf="parent"
+        map:layout_constraintStart_toStartOf="parent"
+        map:layout_constraintTop_toBottomOf="@+id/linearLayoutCompat">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="SELECT YOUR LOCATION"
+            android:fontFamily="@font/nunito_sans_semibold"
+            android:textSize="13sp"
+
+            />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/sublocal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/nunito_sans_semibold"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+<!--            <TextView-->
+<!--                android:layout_width="70dp"-->
+<!--                android:layout_height="20dp"-->
+<!--                android:layout_alignParentEnd="true"-->
+<!--                android:layout_centerInParent="true"-->
+<!--                android:background="@drawable/change_location_background"-->
+<!--                android:gravity="center"-->
+<!--                android:text="Change"-->
+<!--                android:textColor="#1B8BF2"-->
+<!--                android:textSize="10sp" />-->
+        </RelativeLayout>
+
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/nunito_sans_semibold"
+
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/countryname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:fontFamily="@font/nunito_sans_semibold"
+                android:textColor="@color/black" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/Button"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/bottom_cut"
+                android:gravity="center"
+                android:fontFamily="@font/nunito_sans_semibold"
+                android:text="Update location"
+                android:textColor="@color/white"
+
+                />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <!--        <androidx.appcompat.widget.LinearLayoutCompat-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_gravity="center"-->
+        <!--            android:gravity="center"-->
+        <!--            >-->
+
+
+        <!--            <androidx.appcompat.widget.AppCompatButton-->
+        <!--                android:id="@+id/Button"-->
+        <!--                android:layout_width="match_parent"-->
+        <!--                android:layout_height="50dp"-->
+        <!--                android:layout_gravity="center"-->
+        <!--                android:layout_margin="15dp"-->
+        <!--                android:background="@drawable/bottom_cut"-->
+        <!--                android:gravity="center"-->
+        <!--                android:text="Submit otp"-->
+        <!--                android:textColor="@color/white"-->
+
+        <!--                />-->
+
+        <!--        </androidx.appcompat.widget.LinearLayoutCompat>-->
+
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+<!--    <androidx.appcompat.widget.LinearLayoutCompat-->
+<!--        android:layout_width="40dp"-->
+<!--        android:layout_height="40dp"-->
+<!--        android:layout_marginTop="20dp"-->
+<!--        android:background="@drawable/back_background"-->
+<!--        android:layout_marginStart="20dp"-->
+<!--        android:gravity="center"-->
+<!--        map:layout_constraintStart_toStartOf="parent"-->
+<!--        map:layout_constraintTop_toTopOf="parent"-->
+<!--        >-->
+
+<!--        <androidx.appcompat.widget.AppCompatImageView-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_gravity="center"-->
+<!--            android:src="@drawable/ic_baseline_arrow_back_24"-->
+<!--            android:tint="@color/white"-->
+<!--            />-->
+
+
+<!--    </androidx.appcompat.widget.LinearLayoutCompat>-->
+
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/current_location"
+        android:layout_width="220dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/location_background"
+        android:gravity="center"
+        android:padding="5dp"
+        map:layout_constraintBottom_toBottomOf="@+id/linearLayoutCompat"
+        map:layout_constraintEnd_toEndOf="parent"
+        map:layout_constraintStart_toStartOf="parent">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_location_searching_24" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="10dp"
+            android:text="Use current location"
+            android:fontFamily="@font/nunito_sans_semibold"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+
+            />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <!--      android:id="@+id/map"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            tools:context=".choose_location" -->
+
+</androidx.constraintlayout.widget.ConstraintLayout>
